@@ -7,19 +7,14 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Inherit from KE7 device
-$(call inherit-product, device/tecno/KE7/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := KE7
 PRODUCT_NAME := omni_KE7
 PRODUCT_BRAND := TECNO
 PRODUCT_MODEL := TECNO KE7
-PRODUCT_MANUFACTURER := tecno
+PRODUCT_MANUFACTURER := TECNO MOBILITY
